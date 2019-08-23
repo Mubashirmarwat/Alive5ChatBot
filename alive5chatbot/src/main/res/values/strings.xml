@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Alive5ChatBot</string>
+    <string name="title_activity_alive5_chat_bot">Alive5ChatBot</string>
 </resources>
