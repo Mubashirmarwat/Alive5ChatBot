@@ -3,7 +3,8 @@
     package="com.example.alive5chatbot">
 
     <application>
-        <activity android:name=".WebView"></activity>
+        <activity android:name=".WebViewBot"></activity>
+        <activity android:name=".WebView" />
     </application>
 
 </manifest>
