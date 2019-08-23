@@ -18,7 +18,8 @@ public class WebViewBot extends AppCompatActivity {
         Bundle b = intent.getExtras();
         if(b!=null){
             String id = (String) b.get("id");
-            webView.loadUrl(id);
+            String url = "http://s3.amazonaws.com/alive5cdn/stage_chat_window.html?wid="+id;
+            webView.loadUrl(url);
         }
     }
 }
