@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 public class WebViewBot extends AppCompatActivity {
 
@@ -17,8 +18,11 @@ public class WebViewBot extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle b = intent.getExtras();
         if(b!=null){
+
             String id = (String) b.get("id");
+            Toast.makeText(this,id,Toast.LENGTH_LONG).show();
             String url = "http://s3.amazonaws.com/alive5cdn/stage_chat_window.html?wid="+id;
+            webView.getSettings().setJavaScriptEnabled(true);
             webView.loadUrl(url);
         }
     }
