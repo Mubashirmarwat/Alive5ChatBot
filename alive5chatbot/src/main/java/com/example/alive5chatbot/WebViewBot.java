@@ -13,6 +13,7 @@ public class WebViewBot extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view_bot);
 
+        getActionBar().hide();
         WebView webView = (WebView) findViewById(R.id.view_chat_bot);
 
         Intent intent = getIntent();
@@ -20,7 +21,7 @@ public class WebViewBot extends AppCompatActivity {
         if(b!=null){
 
             String id = (String) b.get("id");
-            Toast.makeText(this,id,Toast.LENGTH_LONG).show();
+
             String url = "http://s3.amazonaws.com/alive5cdn/stage_chat_window.html?wid="+id;
             webView.getSettings().setJavaScriptEnabled(true);
             webView.loadUrl(url);
