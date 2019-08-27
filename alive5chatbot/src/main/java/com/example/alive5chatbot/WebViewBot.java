@@ -13,7 +13,7 @@ public class WebViewBot extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view_bot);
 
-        getActionBar().hide();
+        getSupportActionBar().hide();
         WebView webView = (WebView) findViewById(R.id.view_chat_bot);
 
         Intent intent = getIntent();
