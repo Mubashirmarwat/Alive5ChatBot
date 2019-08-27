@@ -1,4 +1,25 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.novoda.bintray-release'
+
+apply plugin: 'com.android.library'
+//apply from: 'maven-push.gradle’
+
+
+publish {
+
+    def groupProjectID = 'alive5.chatBot'
+    def artifactProjectID = 'alive5ChatBot'
+    def publishVersionID = '1.0.0'
+
+    userOrg = 'goltechnologies'
+    repoName = 'Alive5ChatBot'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Library for alive5 chat bot.'
+    website = 'https://github.com/Mubashirmarwat/KotlinAlive5ChatBot.git'
+
+}
 
 android {
     compileSdkVersion 28
